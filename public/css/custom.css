@@ -1,0 +1,45 @@
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.text-foto{
+  display: none;
+  margin-bottom: 5px;
+}
+
+#namaFoto{
+    font-style: italic;
+}
+
+ .invalid-feedback{
+    display: block;
+    /*margin-bottom: .75rem;
+    margin-top: -1.25rem;*/
+}
+
+.alert{
+  padding: 16px;
+}
+
+table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th:first-child:before{
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.filter-container .clearfix{
+  margin-bottom: 15px;
+}
+
+.dropdown-menu{
+  min-width: auto;
+}
