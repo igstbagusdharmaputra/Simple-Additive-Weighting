@@ -41,11 +41,7 @@ class KriteriaController extends Controller
                         </button>
                     <div class="dropdown-menu" aria-labelledby="btnGroupDrop">
                         <a class="dropdown-item text-warning" href="'.route('kriteria.edit', [$data[$key]['id']]).'"><i class="ti-check-box"></i> Edit</a>
-                        <button type="button" class="btn-link dropdown-item text-danger btn-delete" data-id="'.$data[$key]['id'].'"><i class="ti-trash"></i> Hapus</button>
-                        <form method="POST" id="form-delete-'.$data[$key]['id'].'" style="display: inline" action="'.route('kriteria.destroy',[$data[$key]['id']]).'">
-                            '.csrf_field().'
-                            '.method_field('DELETE').'
-                        </form>
+                       
                     </div>
                 </div>
                 ';
@@ -97,7 +93,7 @@ class KriteriaController extends Controller
     public function update($id){
         try {
             $input = $this->validate(request(),[
-                'nama_kriteria'      => 'max:150|string|required',
+                // 'nama_kriteria'      => 'max:150|string|required',
                 'atribut'    => 'string|required',
                 'bobot'     => 'required|between:0,99.99'
             ]);
@@ -110,7 +106,7 @@ class KriteriaController extends Controller
 
 
             $dataForUpdate = [
-                'nama_kriteria'      => $input['nama_kriteria'],
+                // 'nama_kriteria'      => $input['nama_kriteria'],
                 'atribut'    => $input['atribut'],
                 'bobot'    => $input['bobot']
             ];

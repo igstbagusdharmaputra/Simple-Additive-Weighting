@@ -21,7 +21,7 @@
                     <form action="{{ route('kriteria.update',[$item->id]) }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <label class="col-form-label">Nama Kriteria</label>
                             <input type="text" class="form-control" name="nama_kriteria" value="{{ empty(old('nama_kriteria')) ? $item->nama_kriteria : old('nama_kriteria') }}">
                             @if ($errors->has('nama_kriteria'))
@@ -29,7 +29,7 @@
                                     <strong>{{ $errors->first('nama_kriteria') }}</strong>
                                 </span>
                             @endif
-                        </div>
+                        </div> --}}
                         <div class="form-group">
                             <label class="col-form-label">Atribut</label>
                             <select name="atribut" class="custom-select">
