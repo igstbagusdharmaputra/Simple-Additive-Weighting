@@ -15,6 +15,8 @@
                     <li @if(Request::is('/control-panel/pengguna')) {{ 'class=active' }} @endif ><a href="{{ route('pengguna.index') }}"><i class="ti-user"></i> <span>Data Pengguna</span></a></li>
                     <li @if(Request::is('/control-panel/tanaman')) {{ 'class=active' }} @endif ><a href="{{ route('tanaman.index') }}"><i class="ti-heart"></i> <span>Data Tanaman</span></a></li>
                     <li @if(Request::is('/control-panel/saw')) {{ 'class=active' }} @endif ><a href="{{ route('saw.index') }}"><i class="ti-bookmark"></i> <span>Data Rekomendasi</span></a></li>
+
+                    <li @if(Request::is('/control-panel/kategori')) {{ 'class=active' }} @endif ><a href="{{ route('kategori.index') }}"><i class="ti-bookmark"></i> <span>Data Kategori</span></a></li>
                 </ul>
             </nav>
         </div>

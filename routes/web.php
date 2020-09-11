@@ -44,6 +44,17 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/control-panel/tanaman/test','TanamanController@test')->name('tanaman.test');
 
         Route::get('/control-panel/saw', 'SawController@index')->name('saw.index');
+
+
+    // Kategori 
+
+        Route::get('/control-panel/kategori', 'KategoriController@data')->name('kategori.index');
+        Route::get('/control-panel/kategori/create', 'KategoriController@create')->name('kategori.create');
+        Route::get('/control-panel/kategori/data', 'KategoriController@showdata')->name('kategori.showdata');
+        Route::delete('/control-panel/kategori/{id}', 'KategoriController@destroy')->name('kategori.destroy');
+        Route::put('/control-panel/kategori/{id}', 'KategoriController@update')->name('kategori.update');
+        Route::get('/control-panel/kategori/{id}/edit','KategoriController@edit')->name('kategori.edit');
+        Route::post('/control-panel/kategori/store','KategoriController@store')->name('kategori.store');
         // Route::get('/control-panel/saw/matrix_nilai', 'SawController@matrix_nilai')->name('saw.matrix_nilai');
         //Route::get('/control-panel/saw/matrix_normalisasi', 'SawController@matrix_normalisasi')->name('saw.matrix_normalisasi');
         // Route::get('/control-panel/saw/matrix_preferensi', 'SawController@matrix_preferensi')->name('saw.matrix_preferensi');
